@@ -1,3 +1,4 @@
+<!-- 添加任务 -->
 <template>
     <input
         class="input-card"
@@ -15,6 +16,7 @@ const {listId} = defineProps(['listId'])
 import {useListsStore} from '../store/lists'
 const store=useListsStore()
 
+//将输入的值写出对象形式，添加到pinia中state的cards里
 function createCard(){
     if (cardName.value !== "") {
         const card = {
