@@ -1,0 +1,122 @@
+{
+    "sourceFile": "src/components/Popup.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 26,
+            "patches": [
+                {
+                    "date": 1712233653968,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712233905801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <template>\r\n-\r\n+ <transition>\r\n+    <div v-if=\"overlayIsActive\" class=\"overlay\" @click=\"closeOverlay\"></div>\r\n+  </transition>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n"
+                },
+                {
+                    "date": 1712233922573,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n <template>\r\n- <transition>\r\n+    <transition>\r\n     <div v-if=\"overlayIsActive\" class=\"overlay\" @click=\"closeOverlay\"></div>\r\n-  </transition>\r\n+    </transition>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import {  } from 'vue'\r\n-\r\n+co\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712233933483,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n     </transition>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n-import {  } from 'vue'\r\n-co\r\n+import { computed } from 'vue'\r\n+computed({})\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712233938695,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n-computed({})\r\n+computed(()=>{\r\n+    re\r\n+})\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712233969359,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n computed(()=>{\r\n-    re\r\n+    return \r\n })\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712233978678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n+import {useListsStore} from './store/lists'\r\n computed(()=>{\r\n     return \r\n })\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712233985222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n import {useListsStore} from './store/lists'\r\n+const store=useListsStore()\r\n computed(()=>{\r\n     return \r\n })\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712233991477,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import { computed } from 'vue'\r\n import {useListsStore} from './store/lists'\r\n const store=useListsStore()\r\n computed(()=>{\r\n-    return \r\n+    return store.ge\r\n })\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712234000451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import { computed } from 'vue'\r\n import {useListsStore} from './store/lists'\r\n const store=useListsStore()\r\n computed(()=>{\r\n-    return store.ge\r\n+    return store.getters['overlay']\r\n })\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712234017577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,11 @@\n const store=useListsStore()\r\n computed(()=>{\r\n     return store.getters['overlay']\r\n })\r\n+function closeOverlay(){\r\n+    \r\n+}\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712234024804,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,15 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n-import {useListsStore} from './store/lists'\r\n+import {useListsStore} from '''\r\n const store=useListsStore()\r\n computed(()=>{\r\n     return store.getters['overlay']\r\n })\r\n function closeOverlay(){\r\n-    \r\n+\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712234030192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n-import {useListsStore} from '''\r\n+import {useListsStore} from '../'\r\n const store=useListsStore()\r\n computed(()=>{\r\n     return store.getters['overlay']\r\n })\r\n"
+                },
+                {
+                    "date": 1712234037274,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n-import {useListsStore} from '../'\r\n+import {useListsStore} from '../store/lists'\r\n const store=useListsStore()\r\n computed(()=>{\r\n     return store.getters['overlay']\r\n })\r\n"
+                },
+                {
+                    "date": 1712234049781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import { computed } from 'vue'\r\n import {useListsStore} from '../store/lists'\r\n const store=useListsStore()\r\n computed(()=>{\r\n-    return store.getters['overlay']\r\n+    return store.\r\n })\r\n function closeOverlay(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1712234072672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n import { computed } from 'vue'\r\n import {useListsStore} from '../store/lists'\r\n const store=useListsStore()\r\n computed(()=>{\r\n-    return store.\r\n+    return store.overlay\r\n })\r\n function closeOverlay(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1712234087562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n computed(()=>{\r\n     return store.overlay\r\n })\r\n function closeOverlay(){\r\n-\r\n+    store\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712234094665,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n computed(()=>{\r\n     return store.overlay\r\n })\r\n function closeOverlay(){\r\n-    store\r\n+    store.toggleOverlay()\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1712234156185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n import {useListsStore} from '../store/lists'\r\n const store=useListsStore()\r\n-computed(()=>{\r\n+overlayIsActive=computed(()=>{\r\n     return store.overlay\r\n })\r\n function closeOverlay(){\r\n     store.toggleOverlay()\r\n"
+                },
+                {
+                    "date": 1712235815410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,17 @@\n <script lang=\"ts\" name=\"\" setup>\r\n import { computed } from 'vue'\r\n import {useListsStore} from '../store/lists'\r\n const store=useListsStore()\r\n-overlayIsActive=computed(()=>{\r\n+const overlayIsActive=computed(()=>{\r\n     return store.overlay\r\n })\r\n function closeOverlay(){\r\n     store.toggleOverlay()\r\n }\r\n </script>\r\n \r\n <style scoped>\r\n-\r\n+.overlay{\r\n+    \r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712235821803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,7 @@\n </script>\r\n \r\n <style scoped>\r\n .overlay{\r\n-    \r\n+    background-color: pink;\r\n }\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712235838339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,6 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n-.overlay{\r\n-    background-color: pink;\r\n-}\r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712237395819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,6 +16,29 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n+.v-enter-from {\r\n+  opacity: 0;\r\n+}\r\n \r\n+.v-enter-active {\r\n+  transition: all 0.3s ease-out;\r\n+}\r\n+\r\n+.v-enter-to {\r\n+  opacity: 1;\r\n+}\r\n+\r\n+.v-leave-from {\r\n+  opacity: 1;\r\n+}\r\n+\r\n+.v-leave-active {\r\n+  transition: all 0.3s ease-in;\r\n+}\r\n+\r\n+.v-leave-to {\r\n+  opacity: 0;\r\n+}\r\n+\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712237452428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,29 +16,6 @@\n }\r\n </script>\r\n \r\n <style scoped>\r\n-.v-enter-from {\r\n-  opacity: 0;\r\n-}\r\n \r\n-.v-enter-active {\r\n-  transition: all 0.3s ease-out;\r\n-}\r\n-\r\n-.v-enter-to {\r\n-  opacity: 1;\r\n-}\r\n-\r\n-.v-leave-from {\r\n-  opacity: 1;\r\n-}\r\n-\r\n-.v-leave-active {\r\n-  transition: all 0.3s ease-in;\r\n-}\r\n-\r\n-.v-leave-to {\r\n-  opacity: 0;\r\n-}\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712237610907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,128 @@\n+<template>\r\n+    <transition>\r\n+        <div v-if=\"store.overlay\" class=\"modal\">\r\n+            <h1>List Name : {{ store.currentData.listName }}</h1>\r\n+            <input :placeholder=\"store.currentData.name\" v-model=\"cardName\" />\r\n+            <div class=\"container-button\">\r\n+            <button class=\"blue\" @click=\"saveElement\">save</button>\r\n+            <button class=\"red\" @click=\"deleteElement\">delete</button>\r\n+            </div>\r\n+        </div>\r\n+    </transition>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"\" setup>\r\n+import { ref } from 'vue'\r\n+import {useListsStore} from '../store/lists'\r\n+const store=useListsStore()\r\n+let cardName=ref(null)\r\n+\r\n+function saveElement(){\r\n+\r\n+    if (cardName.value === null) {\r\n+        cardName.value = store.currentData.name;\r\n+    }\r\n+    \r\n+    const card = {\r\n+        listId: store.currentData.listId,\r\n+        id: store.currentData.id,\r\n+        name: cardName.value,\r\n+    };\r\n+    store.saveCard(card)\r\n+    cardName.value = null;\r\n+    store.toggleOverlay() \r\n+}\r\n+function deleteElement(){\r\n+    store.deleteCard(store.currentData)\r\n+    store.toggleOverlay()\r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+.v-enter-from {\r\n+  opacity: 0;\r\n+}\r\n+\r\n+.v-enter-active {\r\n+  transition: all 0.3s ease-out;\r\n+}\r\n+\r\n+.v-enter-to {\r\n+  opacity: 1;\r\n+}\r\n+\r\n+.v-leave-from {\r\n+  opacity: 1;\r\n+}\r\n+\r\n+.v-leave-active {\r\n+  transition: all 0.3s ease-in;\r\n+}\r\n+\r\n+.v-leave-to {\r\n+  opacity: 0;\r\n+}\r\n+.modal{\r\n+    display: flex;\r\n+    flex-direction: column;\r\n+    justify-content: center;\r\n+    align-items: center;\r\n+    position: absolute;\r\n+    background-color: pink;\r\n+    padding: 20px;\r\n+    width: 400px;\r\n+    border-radius: 10px;\r\n+    background-color: rgba(235, 236, 240, 1);\r\n+    top: 50%;\r\n+    left: 50%;\r\n+    transform: translate(-50%, -50%);\r\n+    \r\n+}\r\n+input {\r\n+  width: 250px;\r\n+  padding: 10px 20px;\r\n+  border: 1px solid rgba(60, 60, 60, 0.2);\r\n+  border-radius: 10px;\r\n+  outline: none;\r\n+  margin: 10px 0;\r\n+}\r\n+\r\n+button {\r\n+  display: flex;\r\n+  border: none;\r\n+  color: white;\r\n+  padding: 15px 32px;\r\n+  text-align: center;\r\n+  text-decoration: none;\r\n+  display: inline-block;\r\n+  font-size: 16px;\r\n+  border-radius: 15px;\r\n+  cursor: pointer;\r\n+  transition-duration: 0.4s;\r\n+}\r\n+\r\n+button:hover {\r\n+  color: white;\r\n+}\r\n+\r\n+.blue {\r\n+  background-color: rgba(1, 100, 255, 1);\r\n+}\r\n+\r\n+.blue:hover {\r\n+  background-color: rgba(1, 100, 255, 0.8);\r\n+}\r\n+\r\n+.red {\r\n+  background-color: rgba(250, 52, 75, 1);\r\n+}\r\n+.red:hover {\r\n+  background-color: rgba(250, 52, 75, 0.8);\r\n+}\r\n+\r\n+.container-button {\r\n+  display: flex;\r\n+  flex-direction: row;\r\n+  gap: 30px;\r\n+}\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712237621035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -75,9 +75,10 @@\n     background-color: rgba(235, 236, 240, 1);\r\n     top: 50%;\r\n     left: 50%;\r\n     transform: translate(-50%, -50%);\r\n-    \r\n+  z-index: 500;\r\n+\r\n }\r\n input {\r\n   width: 250px;\r\n   padding: 10px 20px;\r\n@@ -124,26 +125,5 @@\n   display: flex;\r\n   flex-direction: row;\r\n   gap: 30px;\r\n }\r\n-</style>\n-<template>\r\n-    <transition>\r\n-    <div v-if=\"overlayIsActive\" class=\"overlay\" @click=\"closeOverlay\"></div>\r\n-    </transition>\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"\" setup>\r\n-import { computed } from 'vue'\r\n-import {useListsStore} from '../store/lists'\r\n-const store=useListsStore()\r\n-const overlayIsActive=computed(()=>{\r\n-    return store.overlay\r\n-})\r\n-function closeOverlay(){\r\n-    store.toggleOverlay()\r\n-}\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712237670596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,13 +17,11 @@\n const store=useListsStore()\r\n let cardName=ref(null)\r\n \r\n function saveElement(){\r\n-\r\n     if (cardName.value === null) {\r\n         cardName.value = store.currentData.name;\r\n     }\r\n-    \r\n     const card = {\r\n         listId: store.currentData.listId,\r\n         id: store.currentData.id,\r\n         name: cardName.value,\r\n@@ -75,9 +73,9 @@\n     background-color: rgba(235, 236, 240, 1);\r\n     top: 50%;\r\n     left: 50%;\r\n     transform: translate(-50%, -50%);\r\n-  z-index: 500;\r\n+    z-index: 550;\r\n \r\n }\r\n input {\r\n   width: 250px;\r\n"
+                }
+            ],
+            "date": 1712233653968,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}
