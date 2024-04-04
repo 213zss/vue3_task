@@ -7,7 +7,7 @@
         item-key="id"
       >
         <template #item="{ element }">
-          <div class="list-group-item" @click="togglePopup(element)">
+          <div class="list-group-item">
             {{ element.name }}
           </div>
         </template>
@@ -17,25 +17,13 @@
 <script lang="ts" name="CardList" setup>
 import { watchEffect, defineProps,ref } from 'vue'
 import draggable from 'vuedraggable'
-const {listId,listName} = defineProps(['listId','listName'])
+const {listId} = defineProps(['listId'])
 import {useListsStore} from '../store/lists'
 const store=useListsStore()
 const cards = ref<object[]>([]);
 watchEffect(() => {
     cards.value = store.cards.filter(card => card.listId === listId);
 });
-function togglePopup(data:object){
-  const currentData = {
-        listId: listId,
-        listName: listName,
-        id: data.id,
-        name: data.name,
-      };
-  store.toggleOverlay()
-  store.openForm(currentData)
-  console.log(currentData);
-  
-}
 </script>
 
 
