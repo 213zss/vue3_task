@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/components/CardInput.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1712196892375,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712196911858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,8 +22,9 @@\n \r\n <style scoped>\r\n .input-card {\r\n     width: 100%;\r\n+    bo\r\n     outline: none;\r\n }\r\n /* .input-card {\r\n   position: relative;\r\n"
+                },
+                {
+                    "date": 1712196922655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,12 @@\n \r\n <style scoped>\r\n .input-card {\r\n     width: 100%;\r\n-    bo\r\n+    border: none;\r\n     outline: none;\r\n+  border-radius: 5px;\r\n+\r\n }\r\n /* .input-card {\r\n   position: relative;\r\n   background-color: white;\r\n"
+                },
+                {
+                    "date": 1712196931982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n .input-card {\r\n     width: 100%;\r\n     border: none;\r\n     outline: none;\r\n-  border-radius: 5px;\r\n+    border-radius: 5px;\r\n+    padding: 10px;\r\n \r\n }\r\n /* .input-card {\r\n   position: relative;\r\n"
+                },
+                {
+                    "date": 1712196962340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,8 +27,9 @@\n     outline: none;\r\n     border-radius: 5px;\r\n     padding: 10px;\r\n \r\n+    margin-bottom: 10px;\r\n }\r\n /* .input-card {\r\n   position: relative;\r\n   background-color: white;\r\n"
+                },
+                {
+                    "date": 1712197008086,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,9 @@\n let cardName = ref('')\r\n \r\n function createCard(){\r\n     if (this.cardName !== \"\") {\r\n+        console.log();\r\n         \r\n     }\r\n     \r\n }\r\n@@ -26,9 +27,8 @@\n     border: none;\r\n     outline: none;\r\n     border-radius: 5px;\r\n     padding: 10px;\r\n-\r\n     margin-bottom: 10px;\r\n }\r\n /* .input-card {\r\n   position: relative;\r\n"
+                },
+                {
+                    "date": 1712197014554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n import { ref} from 'vue'\r\n let cardName = ref('')\r\n \r\n function createCard(){\r\n-    if (this.cardName !== \"\") {\r\n+    if (cardName.value !== \"\") {\r\n         console.log();\r\n         \r\n     }\r\n     \r\n"
+                },
+                {
+                    "date": 1712200493993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,12 @@\n \r\n <script lang=\"ts\" name=\"Card\" setup>\r\n import { ref} from 'vue'\r\n let cardName = ref('')\r\n-\r\n+const {listId} = defineProps(['listId'])\r\n function createCard(){\r\n     if (cardName.value !== \"\") {\r\n-        console.log();\r\n+        console.log(cardName.value);\r\n         \r\n     }\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1712200501625,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,47 @@\n+<template>\r\n+    <input\r\n+        class=\"input-card\"\r\n+        type=\"text\"\r\n+        placeholder=\"Create a Card\"\r\n+        v-model=\"cardName\"\r\n+        @keyup.enter=\"createCard\"\r\n+    />\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Card\" setup>\r\n+import { ref,defineProps } from 'vue'\r\n+let cardName = ref('')\r\n+const {listId} = defineProps(['listId'])\r\n+\r\n+\r\n+function createCard(){\r\n+    if (cardName.value !== \"\") {\r\n+        console.log(cardName.value);\r\n+        \r\n+    }\r\n+    \r\n+}\r\n+</script>\r\n+\r\n+<style scoped>\r\n+.input-card {\r\n+    width: 100%;\r\n+    border: none;\r\n+    outline: none;\r\n+    border-radius: 5px;\r\n+    padding: 10px;\r\n+    margin-bottom: 10px;\r\n+}\r\n+/* .input-card {\r\n+  position: relative;\r\n+  background-color: white;\r\n+  min-height: 30px;\r\n+  width: 100%;\r\n+  display: flex;\r\n+  align-items: center;\r\n+  border-radius: 5px;\r\n+  padding: 10px;\r\n+  word-break: break-all;\r\n+  font-size: 16px;\r\n+} */\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712200512327,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n \r\n function createCard(){\r\n     if (cardName.value !== \"\") {\r\n-        console.log(cardName.value);\r\n+        console.log(cardName.value,);\r\n         \r\n     }\r\n     \r\n }\r\n@@ -43,50 +43,5 @@\n   padding: 10px;\r\n   word-break: break-all;\r\n   font-size: 16px;\r\n } */\r\n-</style>\n-<template>\r\n-    <input\r\n-        class=\"input-card\"\r\n-        type=\"text\"\r\n-        placeholder=\"Create a Card\"\r\n-        v-model=\"cardName\"\r\n-        @keyup.enter=\"createCard\"\r\n-    />\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"Card\" setup>\r\n-import { ref} from 'vue'\r\n-let cardName = ref('')\r\n-const {listId} = defineProps(['listId'])\r\n-function createCard(){\r\n-    if (cardName.value !== \"\") {\r\n-        console.log(cardName.value);\r\n-        \r\n-    }\r\n-    \r\n-}\r\n-</script>\r\n-\r\n-<style scoped>\r\n-.input-card {\r\n-    width: 100%;\r\n-    border: none;\r\n-    outline: none;\r\n-    border-radius: 5px;\r\n-    padding: 10px;\r\n-    margin-bottom: 10px;\r\n-}\r\n-/* .input-card {\r\n-  position: relative;\r\n-  background-color: white;\r\n-  min-height: 30px;\r\n-  width: 100%;\r\n-  display: flex;\r\n-  align-items: center;\r\n-  border-radius: 5px;\r\n-  padding: 10px;\r\n-  word-break: break-all;\r\n-  font-size: 16px;\r\n-} */\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712200517987,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n \r\n \r\n function createCard(){\r\n     if (cardName.value !== \"\") {\r\n-        console.log(cardName.value,);\r\n+        console.log(cardName.value,listId);\r\n         \r\n     }\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1712200583697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,12 @@\n \r\n function createCard(){\r\n     if (cardName.value !== \"\") {\r\n         console.log(cardName.value,listId);\r\n-        \r\n+        const card = {\r\n+          listId: this.listId,\r\n+          name: this.cardName,\r\n+        };\r\n     }\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712200592283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     if (cardName.value !== \"\") {\r\n         console.log(cardName.value,listId);\r\n         const card = {\r\n           listId: this.listId,\r\n-          name: this.cardName,\r\n+          name: cardName.value,\r\n         };\r\n     }\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1712200597583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,9 @@\n         const card = {\r\n           listId: listId,\r\n           name: cardName.value,\r\n         };\r\n+        \r\n     }\r\n     \r\n }\r\n </script>\r\n"
+                },
+                {
+                    "date": 1712200603261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,8 +19,10 @@\n         const card = {\r\n           listId: listId,\r\n           name: cardName.value,\r\n         };\r\n+        console.log(card);\r\n+        \r\n     }\r\n     \r\n }\r\n </script>\r\n"
+                }
+            ],
+            "date": 1712196892375,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <input\r\n        class=\"input-card\"\r\n        type=\"text\"\r\n        placeholder=\"Create a Card\"\r\n        v-model=\"cardName\"\r\n        @keyup.enter=\"createCard\"\r\n    />\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"Card\" setup>\r\nimport { ref} from 'vue'\r\nlet cardName = ref('')\r\n\r\nfunction createCard(){\r\n    if (this.cardName !== \"\") {\r\n        \r\n    }\r\n    \r\n}\r\n</script>\r\n\r\n<style scoped>\r\n.input-card {\r\n    width: 100%;\r\n    outline: none;\r\n}\r\n/* .input-card {\r\n  position: relative;\r\n  background-color: white;\r\n  min-height: 30px;\r\n  width: 100%;\r\n  display: flex;\r\n  align-items: center;\r\n  border-radius: 5px;\r\n  padding: 10px;\r\n  word-break: break-all;\r\n  font-size: 16px;\r\n} */\r\n</style>"
+        }
+    ]
+}

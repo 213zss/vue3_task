@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/store/lists.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1712198280405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712198288352,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n import {defineStore} from 'pinia'\r\n defineStore('lists',{\r\n-    \r\n+    getters:{\r\n+        \r\n+    }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712198300569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import {defineStore} from 'pinia'\r\n defineStore('lists',{\r\n+    state\r\n     getters:{\r\n-        \r\n+\r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712198311926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import {defineStore} from 'pinia'\r\n defineStore('lists',{\r\n-    state\r\n+    state\\(){\r\n+\r\n+    },\r\n     getters:{\r\n \r\n     }\r\n })\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712198323552,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,5 +5,5 @@\n     },\r\n     getters:{\r\n \r\n     }\r\n-}\n\\ No newline at end of file\n+})\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712198330423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+import {defineStore} from 'pinia'\r\n+useListStore=defineStore('lists',{\r\n+    state(){\r\n+\r\n+    },\r\n+    getters:{\r\n+\r\n+    }\r\n+})\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1712198280405,
+            "name": "Commit-0",
+            "content": "import {defineStore} from 'pinia'\r\ndefineStore('lists',{\r\n    \r\n})"
+        }
+    ]
+}

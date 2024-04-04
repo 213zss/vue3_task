@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/components/Card.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1712194718675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712194724261,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+<template>\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Card\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712194852827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,22 +3,10 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Card\" setup>\r\n import {  } from 'vue'\r\n-\r\n+import C\r\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712194862385,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,11 @@\n+<template>\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Card\" setup>\r\n+import {  } from 'vue'\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712195122087,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,17 @@\n+<template>\r\n+<input\r\n+    class=\"input-card\"\r\n+    type=\"text\"\r\n+    placeholder=\"Create a Card\"\r\n+    v-model=\"cardName\"\r\n+    @keyup.enter=\"createCard\"\r\n+  />\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"Card\" setup>\r\n+import {  } from 'vue'\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712195133032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     />\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"Card\" setup>\r\n-import {  } from 'vue'\r\n+import { ref } from 'vue'\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1712195149772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"Card\" setup>\r\n import { ref } from 'vue'\r\n-let cardName f\\\r\n+let cardName = ref('')\r\n </script>\r\n \r\n <style scoped>\r\n \r\n"
+                }
+            ],
+            "date": 1712194718675,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

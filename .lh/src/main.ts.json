@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/main.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1712197980751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712198041048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-imp\n+import {createPinia }\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712198052554,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n-import {createPinia }\n+import {createPinia } from 'pinia'\n+createApp(App)\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712198065380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,6 @@\n \n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n-createApp(App)\n+const app=createApp(App)\n createApp(App).mount('#app')\n"
+                },
+                {
+                    "date": 1712198073345,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,5 +3,6 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n const app=createApp(App)\n-createApp(App).mount('#app')\n+app.use\n+app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198084898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,6 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n const app=createApp(App)\n-app.use\n+app.use()\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198093686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,6 +3,7 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n const app=createApp(App)\n+const pinia=\n app.use()\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198104341,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n const app=createApp(App)\n-const pinia=\n-app.use()\n+const pinia=createPinia()\n+\n+app.use(pinia)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198110480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import { createApp } from 'vue'\n import App from './App.vue'\n import {createPinia } from 'pinia'\n const app=createApp(App)\n+/* 创建pinia */\n const pinia=createPinia()\n \n app.use(pinia)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198117494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n import {createPinia } from 'pinia'\n const app=createApp(App)\n /* 创建pinia */\n const pinia=createPinia()\n-\n+/* 使用pinia */\n app.use(pinia)\n app.mount('#app')\n"
+                },
+                {
+                    "date": 1712198127932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n import './assets/main.css'\n \n import { createApp } from 'vue'\n import App from './App.vue'\n+\n+\n import {createPinia } from 'pinia'\n const app=createApp(App)\n /* 创建pinia */\n const pinia=createPinia()\n"
+                },
+                {
+                    "date": 1712198134983,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,8 @@\n import {createPinia } from 'pinia'\n const app=createApp(App)\n /* 创建pinia */\n const pinia=createPinia()\n+\n /* 使用pinia */\n app.use(pinia)\n app.mount('#app')\n"
+                }
+            ],
+            "date": 1712197980751,
+            "name": "Commit-0",
+            "content": "import './assets/main.css'\n\nimport { createApp } from 'vue'\nimport App from './App.vue'\nimp\ncreateApp(App).mount('#app')\n"
+        }
+    ]
+}

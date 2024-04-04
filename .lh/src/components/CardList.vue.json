@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/components/CardList.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1712194709863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1712194716166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n \r\n </template>\r\n \r\n-<script lang=\"ts\" name=\"\" setup>\r\n+<script lang=\"ts\" name=\"CardList\" setup>\r\n import {  } from 'vue'\r\n \r\n </script>\r\n \r\n"
+                },
+                {
+                    "date": 1712194864497,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+<template>\r\n+\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"CardList\" setup>\r\n+import {  } from 'vue'\r\n+import Card from './CardList.vue';\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712194885204,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+<template>\r\n+Card\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"CardList\" setup>\r\n+import {  } from 'vue'\r\n+import Card from './Card.vue';\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712194894480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-Card\r\n+\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"CardList\" setup>\r\n import {  } from 'vue'\r\n@@ -9,30 +9,5 @@\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"CardList\" setup>\r\n-import {  } from 'vue'\r\n-import Card from './CardList.vue';\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n-</style>\n-<template>\r\n-\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"CardList\" setup>\r\n-import {  } from 'vue'\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712195103726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+<template>\r\n+    <Card></Card>\r\n+</template>\r\n+\r\n+<script lang=\"ts\" name=\"CardList\" setup>\r\n+import {  } from 'vue'\r\n+\r\n+</script>\r\n+\r\n+<style scoped>\r\n+\r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712196616873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,13 @@\n <template>\r\n-    <Card></Card>\r\n+<span\r\n+      class=\"element-card\"\r\n+      v-for=\"(card, index) in cards\"\r\n+      :key=\"index\"\r\n+      @click=\"togglePopup(card)\"\r\n+    >\r\n+      {{ card.name }}\r\n+    </span>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"CardList\" setup>\r\n import {  } from 'vue'\r\n@@ -8,18 +15,5 @@\n </script>\r\n \r\n <style scoped>\r\n \r\n-</style>\n-<template>\r\n-\r\n-</template>\r\n-\r\n-<script lang=\"ts\" name=\"CardList\" setup>\r\n-import {  } from 'vue'\r\n-import Card from './Card.vue';\r\n-\r\n-</script>\r\n-\r\n-<style scoped>\r\n-\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712196636406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,7 @@\n <template>\r\n-<span\r\n-      class=\"element-card\"\r\n-      v-for=\"(card, index) in cards\"\r\n-      :key=\"index\"\r\n-      @click=\"togglePopup(card)\"\r\n-    >\r\n+    <span\r\n+      class=\"element-card\">\r\n       {{ card.name }}\r\n     </span>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712196643904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,7 @@\n <template>\r\n-    <span\r\n-      class=\"element-card\">\r\n-      {{ card.name }}\r\n+    <span class=\"element-card\">\r\n+      hhhh\r\n     </span>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"CardList\" setup>\r\n"
+                },
+                {
+                    "date": 1712196668772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,6 +9,18 @@\n \r\n </script>\r\n \r\n <style scoped>\r\n-\r\n+.element-card {\r\n+  position: relative;\r\n+  background-color: white;\r\n+  height: auto;\r\n+  display: flex;\r\n+  align-items: center;\r\n+  padding: 10px;\r\n+  border-radius: 5px;\r\n+  min-height: 30px;\r\n+  margin-bottom: 10px;\r\n+  word-break: break-all;\r\n+  text-align: left;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1712196674629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n </script>\r\n \r\n <style scoped>\r\n .element-card {\r\n-  position: relative;\r\n+  /* position: relative; */\r\n   background-color: white;\r\n-  height: auto;\r\n+  /* height: auto; */\r\n   display: flex;\r\n   align-items: center;\r\n   padding: 10px;\r\n   border-radius: 5px;\r\n"
+                },
+                {
+                    "date": 1712196689524,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   /* position: relative; */\r\n   background-color: white;\r\n   /* height: auto; */\r\n   display: flex;\r\n-  align-items: center;\r\n+  /* align-items: center; */\r\n   padding: 10px;\r\n   border-radius: 5px;\r\n   min-height: 30px;\r\n   margin-bottom: 10px;\r\n"
+                },
+                {
+                    "date": 1712196722170,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,13 +13,13 @@\n .element-card {\r\n   /* position: relative; */\r\n   background-color: white;\r\n   /* height: auto; */\r\n-  display: flex;\r\n+  /* display: flex; */\r\n   /* align-items: center; */\r\n   padding: 10px;\r\n   border-radius: 5px;\r\n-  min-height: 30px;\r\n+  /* min-height: 30px; */\r\n   margin-bottom: 10px;\r\n   word-break: break-all;\r\n   text-align: left;\r\n }\r\n"
+                },
+                {
+                    "date": 1712196761631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-    <span class=\"element-card\">\r\n+    <div class=\"element-card\">\r\n       hhhh\r\n     </span>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1712196779394,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n     <div class=\"element-card\">\r\n-      hhhh\r\n+      hhhh11111111111\r\n     </div>\r\n </template>\r\n \r\n <script lang=\"ts\" name=\"CardList\" setup>\r\n"
+                },
+                {
+                    "date": 1712200205691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n </template>\r\n \r\n <script lang=\"ts\" name=\"CardList\" setup>\r\n import { computed, defineProps } from 'vue'\r\n-const {cards} = defineProps(['cards','listId'])\r\n+const {cards,listId} = defineProps(['cards','listId'])\r\n let thisCards = computed(()=>{\r\n     return cards.filter((card) => {\r\n         if (card.listId === listId) {\r\n         return true;\r\n"
+                }
+            ],
+            "date": 1712194709863,
+            "name": "Commit-0",
+            "content": "<template>\r\n\r\n</template>\r\n\r\n<script lang=\"ts\" name=\"\" setup>\r\nimport {  } from 'vue'\r\n\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

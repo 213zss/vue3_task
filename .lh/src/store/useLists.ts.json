@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/store/useLists.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1712198260100,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1712198260100,
+            "name": "Commit-0",
+            "content": "import {defineStore} from 'pinia'\r\ndefineStore('useLists')"
+        }
+    ]
+}
